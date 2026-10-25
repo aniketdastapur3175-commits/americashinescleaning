@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  /* Contemporary American Home Care Palette */
+  --canvas: #FAF9F5;
+  --surface: #FFFFFF;
+  --surface-warm: #F4F2EC;
+  --surface-sky: #EBF3FC;
+  
+  --navy: #0A1128;
+  --navy-deep: #060B1C;
+  --navy-card: #101B38;
+  --navy-soft: #1E2D4E;
+  --navy-hover: #162447;
+  
+  --sky: #D0E1F9;
+  --sky-light: #EBF3FC;
+  --sky-accent: #3A6EA5;
+  --sky-dark: #204B7D;
+  
+  --brass: #C5A880;
+  --brass-light: #E4D5BE;
+  --brass-dark: #9F8259;
+  --brass-deep: #7D6340;
+  
+  --slate: #242E3E;
+  --slate-soft: #38455B;
+  --slate-muted: #64748B;
+  --slate-border: #E2E8F0;
+}
+
+@theme {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-surface-sky: var(--surface-sky);
+  
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-card: var(--navy-card);
+  --color-navy-soft: var(--navy-soft);
+  --color-navy-hover: var(--navy-hover);
+  
+  --color-sky: var(--sky);
+  --color-sky-light: var(--sky-light);
+  --color-sky-accent: var(--sky-accent);
+  --color-sky-dark: var(--sky-dark);
+  
+  --color-brass: var(--brass);
+  --color-brass-light: var(--brass-light);
+  --color-brass-dark: var(--brass-dark);
+  --color-brass-deep: var(--brass-deep);
+  
+  --color-slate: var(--slate);
+  --color-slate-soft: var(--slate-soft);
+  --color-slate-muted: var(--slate-muted);
+  --color-slate-border: var(--slate-border);
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF9F5;
+  color: #242E3E;
+}
+
+body {
+  background-color: #FAF9F5;
+  color: #242E3E;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #0A1128;
+  color: #FAF9F5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D0E1F9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A9C6ED;
+}
+
+/* Editorial Typography Utilities */
+.font-editorial {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Frosted glass bar */
+.editorial-glass {
+  background: rgba(250, 249, 245, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.editorial-glass-navy {
+  background: rgba(10, 17, 40, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Focus styles for keyboard accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0A1128;
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
